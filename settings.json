@@ -1,0 +1,10 @@
+{
+      "C_Cpp.errorSquiggles": "disabled",
+      "files.associations": {
+            "stdio.h": "c"
+      },
+       "C_Cpp.intelliSenseEngine": "Disabled",  // cpptools IntelliSense kapat
+  "clangd.path": "clangd"                  // clangd kullan
+      
+      
+}
