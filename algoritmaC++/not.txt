@@ -1,0 +1,18 @@
+| Aşama | Konu                 | Alt Başlıklar                                            |
+| ----- | -------------------- | -------------------------------------------------------- |
+| 1     | Temel Kavramlar      | Array, Pointer, Referans, Bellek Yönetimi (`new/delete`) |
+| 2     | String İşlemleri     | `std::string`, Karakter Dizileri, Fonksiyonlar           |
+| 3     | Struct & Class       | Yapılar, Sınıflar, Constructor/Destructor, Encapsulation |
+| 4     | STL Girişi           | STL Mantığı, Iterator, Algoritmalar                      |
+| 5     | Sıralı Yapılar       | `vector`, `list`, `deque`                                |
+| 6     | Stack & Queue        | `stack`, `queue`, `priority_queue`                       |
+| 7     | Set & Map            | `set`, `map`, `multiset`, `unordered_map` vb.            |
+| 8     | Linked List          | Tek, Çift, Dairesel Bağlı Liste (Elle Uygulama)          |
+| 9     | Ağaçlar (Trees)      | Binary Tree, BST, AVL, Heap (Min/Max)                    |
+| 10    | Grafikler (Graphs)   | Adjacency List/Matrix, BFS, DFS, Dijkstra                |
+| 11    | Hashing              | Hash Tablolar, Çakışma Yönetimi, `unordered_map`         |
+| 12    | Trie                 | Prefix Tree, String Arama, Otomatik Tamamlama            |
+| 13    | İleri Seviye Yapılar | Segment Tree, Fenwick Tree, Union-Find (Disjoint Set)    |
+
+
+Kitap: "Data Structures and Algorithms in C++" - Adam Drozdek
