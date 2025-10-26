@@ -1,9 +1,48 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int sum()
-{
-    int t = 3;
-    int s = 5;
+void sorting(int *arr, int len);
 
-    printf("%d\n", t * s);
-};
+int main() {
+    int n;
+    if (scanf("%d", &n) != 1 || n <= 0) {
+        printf("n/a");
+        return 0;
+    }
+
+    int *arr = (int *)malloc(n * sizeof(int));
+    if (arr == NULL) {
+        printf("n/a");
+        return 0;
+    }
+
+    for (int i = 0; i < n; i++) {
+        if (scanf("%d", &arr[i]) != 1) {
+            printf("n/a");
+            free(arr);
+            return 0;
+        }
+    }
+
+    sorting(arr, n);
+
+    for (int i = 0; i < n; i++) {
+        printf("%d", arr[i]);
+        if (i < n - 1) printf(" ");
+    }
+
+    free(arr);
+    return 0;
+}
+
+void sorting(int *arr, int len) {
+    for (int i = 0; i < len - 1; i++) {
+        for (int j = 0; j < len - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}

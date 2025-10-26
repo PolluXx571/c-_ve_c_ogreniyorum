@@ -11,6 +11,7 @@ public:            // access specifier
     int number2;   // attribute classin icindeki degiskenlere denir variable yok attribute var
     string myName; // attribute ismi myName variable ismi myName
     double myDouble = 3.14;
+    void exMessage();
     string carModel(string name, int year)
     {
         //  ! DEGISKENLER ile yapmak istersek
@@ -26,13 +27,18 @@ public:            // access specifier
     }
 };
 
+void FourTransactions::exMessage()
+{
+    cout << "Hello i am exMessage" << "\n";
+};
+
 int main()
 {
-
     string CarName;
     int CarYear;
     // ! 1 ci nesnemiz
     FourTransactions Player1; // Player1 bir takma isim nesnemize ulasmak icin;
+    Player1.exMessage();
     Player1.myName = "AbuBakr";
     Player1.number1 = 5;
     Player1.number2 = 10;

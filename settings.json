@@ -1,53 +1,83 @@
 {
+      // =================================================================
+      // 1. GENEL AYARLAR
+      // =================================================================
+      "debug.showVariableExplorerOnEntry": false,
+      "debug.inlineValues": false,
+      // 💾 Kaydederken otomatik formatlamayı açar.
+      "editor.formatOnSave": true,
+      "editor.formatOnPaste": true,
+
+      // 🔠 Genel olarak tab boyutu ve boşluk ayarları
+      "editor.tabSize": 4,
+      "editor.insertSpaces": true,
+
+      // 🌈 Prettier varsayılan formatter (JS, HTML, JSON, vs. için)
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+      // =================================================================
+      // 2. C/C++ İÇİN IntelliSense VE Linter AYARLARI
+      // =================================================================
+
+      // 💡 C/C++ eklentisinin varsayılan IntelliSense ve linter'ını kapatır (clangd kullanmak için)
       "C_Cpp.errorSquiggles": "disabled",
-      "files.associations": {
-            "stdio.h": "c",
-            "ostream": "cpp",
-            "iostream": "cpp",
-            "xstring": "cpp",
-            "vector": "cpp",
-            "xutility": "cpp",
-            "atomic": "cpp",
-            "bit": "cpp",
-            "cctype": "cpp",
-            "clocale": "cpp",
-            "cmath": "cpp",
-            "compare": "cpp",
-            "concepts": "cpp",
-            "cstddef": "cpp",
-            "cstdint": "cpp",
-            "cstdio": "cpp",
-            "cstdlib": "cpp",
-            "cstring": "cpp",
-            "ctime": "cpp",
-            "cwchar": "cpp",
-            "exception": "cpp",
-            "initializer_list": "cpp",
-            "ios": "cpp",
-            "iosfwd": "cpp",
-            "iterator": "cpp",
-            "limits": "cpp",
-            "memory": "cpp",
-            "new": "cpp",
-            "stdexcept": "cpp",
-            "streambuf": "cpp",
-            "system_error": "cpp",
-            "tuple": "cpp",
-            "type_traits": "cpp",
-            "typeinfo": "cpp",
-            "utility": "cpp",
-            "xfacet": "cpp",
-            "xiosbase": "cpp",
-            "xlocale": "cpp",
-            "xlocinfo": "cpp",
-            "xlocnum": "cpp",
-            "xmemory": "cpp",
-            "xstddef": "cpp",
-            "xtr1common": "cpp",
-            "string": "cpp"
+      "C_Cpp.intelliSenseEngine": "Disabled",
+
+      // 🚀 Clangd'nin yürütülebilir dosyasının yolu. (PATH'te yüklüyse bu yeterli)
+      "clangd.path": "clangd",
+      // Veya TAM YOLU belirtmek isterseniz (önerilen):
+      //"clangd.path": "C:\\Program Files\\LLVM\\bin\\clangd.exe",
+
+      // =================================================================
+      // 3. C/C++ İÇİN FORMATLAMA AYARLARI (CLANG-FORMAT)
+      // =================================================================
+
+      // 🚨 YENİ EKLENEN: Clang-Format yürütülebilir dosyasının tam yolu
+      // Bu, hem xaver eklentisi hem de C/C++ eklentisi tarafından kullanılır.
+      "C_Cpp.clangFormat_path": "C:\\Program Files\\LLVM\\bin\\clang-format.exe",
+
+      // 📘 C++ dosyaları için varsayılan formatlayıcıyı Clang-Format (xaver eklentisi) olarak ayarlar
+      "[cpp]": {
+            "editor.defaultFormatter": "xaver.clang-format",
+            "editor.formatOnSave": true,
+            "editor.tabSize": 4,
+            "editor.inlayHints.enabled": false
       },
-    "C_Cpp.intelliSenseEngine": "Disabled",  // cpptools IntelliSense kapat
-     "clangd.path": "clangd"                  // clangd kullan
-      
-      
+      "[c]": {
+            "editor.defaultFormatter": "xaver.clang-format",
+            "editor.formatOnSave": true,
+            "editor.tabSize": 4
+      },
+
+      // 📝 Eğer projenizin kök dizininde .clang-format dosyası yoksa, kullanılacak varsayılan stili belirler
+      "C_Cpp.clang_format_fallbackStyle": "Google",
+
+      // =================================================================
+      // 4. PRETTIER'IN DİĞER DİLLER İÇİN DEVAM ETMESİNİ SAĞLAR (Zaten doğruydu)
+      // =================================================================
+
+      "[javascript]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+            "editor.formatOnSave": true
+      },
+      "[typescript]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+            "editor.formatOnSave": true
+      },
+      "[html]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+            "editor.formatOnSave": true
+      },
+      "[json]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+            "editor.formatOnSave": true
+      },
+      "files.associations": {
+            "iostream": "cpp",
+            "ostream": "cpp"
+      }
+
+      // "files.associations" ayarlarınız çok uzun olduğu için burada kısalttım,
+      // ama siz önceki dosyanızdaki "files.associations" bloğunu bu dosyanın sonuna virgül
+      // koymadan ekleyebilirsiniz. Formatlama açısından bir sorun yaratmaz.
 }
