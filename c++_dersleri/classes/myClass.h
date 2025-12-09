@@ -1,10 +1,8 @@
-class MyClass
-{
-public:
+#include <iostream>
+#include <string>
+class MyClass {
+   public:
     int x = 10;
-    string name = "OsmanAli";
-    void myMethod()
-    {
-        cout << "hello from my Class" << "\n";
-    }
+    std::string name = "OsmanAli";
+    void myMethod() { std::cout << "hello from my Class" << "\n"; }
 };
