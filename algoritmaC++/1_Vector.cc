@@ -78,5 +78,5 @@ int main()
         cerr << err << endl;
     }
 
-    s return 0;
+     return 0;
 }
